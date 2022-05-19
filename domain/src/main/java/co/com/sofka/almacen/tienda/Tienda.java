@@ -8,7 +8,7 @@ import java.util.Set;
 public class Tienda extends AggregateEvent<TiendaId> {
 
     protected Gerente gerente;
-    protected Cajero cajero;
+    protected Despachador despachador;
     protected Set<Proveedor> proveedors;
 
     public Tienda(TiendaId entityId) {

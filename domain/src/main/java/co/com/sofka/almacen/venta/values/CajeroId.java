@@ -1,4 +1,4 @@
-package co.com.sofka.almacen.tienda.values;
+package co.com.sofka.almacen.venta.values;
 
 import co.com.sofka.domain.generic.Identity;
 
