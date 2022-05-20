@@ -6,6 +6,7 @@ public class ProductoId extends Identity {
     public ProductoId(String uuid) {
         super(uuid);
     }
+    public ProductoId(){}
     public static ProductoId of(String id){
         return new ProductoId(id);
     }

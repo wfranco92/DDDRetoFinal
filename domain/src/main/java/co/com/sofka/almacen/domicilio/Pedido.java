@@ -17,8 +17,8 @@ public class Pedido extends Entity<PedidoId> {
         this.nombreCliente = nombreCliente;
     }
 
-    public void asignarPeso(Peso peso){
-        this.peso = peso;
+    public void asignarDireccion(Direccion direccion){
+        this.direccion = direccion;
     }
 
     public NombreCliente NombreCliente() {
