@@ -2,6 +2,8 @@ package co.com.sofka.almacen.domicilio.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
+import java.util.Objects;
+
 public class Peso implements ValueObject<Peso.Props>{
 
     private final String unidad;
@@ -9,8 +11,12 @@ public class Peso implements ValueObject<Peso.Props>{
 
 
     public Peso(String unidad, Double valor) {
-        this.unidad = unidad;
-        this.valor = valor;
+        this.unidad = Objects.requireNonNull(unidad);
+        this.valor = Objects.requireNonNull(valor);
+
+        if(this.unidad.isBlank() || this.valor.isNaN()){
+            throw new IllegalArgumentException("Este campo no puede estar vacio o en blanco");
+        }
     }
 
     @Override

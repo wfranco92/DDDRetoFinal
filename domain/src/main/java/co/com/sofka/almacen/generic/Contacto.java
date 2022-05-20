@@ -2,6 +2,8 @@ package co.com.sofka.almacen.generic;
 
 import co.com.sofka.domain.generic.ValueObject;
 
+import java.util.Objects;
+
 public class Contacto implements ValueObject<Contacto.Props> {
 
     private final String direccion;
@@ -9,9 +11,14 @@ public class Contacto implements ValueObject<Contacto.Props> {
     private final String email;
 
     public Contacto(String direccion, String telefono, String email) {
-        this.direccion = direccion;
-        this.telefono = telefono;
-        this.email = email;
+        this.direccion = Objects.requireNonNull(direccion);
+        this.telefono = Objects.requireNonNull(telefono);
+        this.email = Objects.requireNonNull(email);
+
+
+        if(this.direccion.isBlank() || this.telefono.isBlank() || this.email.isBlank()){
+            throw new IllegalArgumentException("Este campo no puede estar vacio o en blanco");
+        }
     }
 
     @Override
