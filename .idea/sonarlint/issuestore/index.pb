@@ -21,10 +21,6 @@ q
 Adomain/src/main/java/co/com/sofka/almacen/venta/values/Fecha.java,9\e\9e423017e77868e64e16ee724c59bdb11b1e6503
 {
 Kdomain/src/main/java/co/com/sofka/almacen/domicilio/values/DomicilioId.java,d\b\db1b70d4c9415db7c840ef65f8609e530a9f2c5d
-t
-Ddomain/src/main/java/co/com/sofka/almacen/domicilio/values/Tipo.java,f\e\fe518fec72a21289f2e73ce990111feaa9d35267
-z
-Jdomain/src/main/java/co/com/sofka/almacen/domicilio/values/VehiculoId.java,8\b\8b0c9f03551d7071fbe1fbcca9e81cdbab331988
 y
 Idomain/src/main/java/co/com/sofka/almacen/domicilio/values/Capacidad.java,8\7\874aef687266f2f2a1f70c47d6f1ca535b730a72
 x
@@ -89,18 +85,12 @@ Qdomain/src/main/java/co/com/sofka/almacen/venta/event/PrecioAsignadoProducto.ja
 Qdomain/src/main/java/co/com/sofka/almacen/venta/command/AsignarSalarioCajero.java,0\4\04acec6431c65f8111e98152b374ad50821c9b3d
 €
 Pdomain/src/main/java/co/com/sofka/almacen/venta/event/SalarioAsignadoCajero.java,7\a\7accadf4d9cea716d1e5ce74e8d5edda9601f5e5
-k
-;domain/src/main/java/co/com/sofka/almacen/venta/Cajero.java,a\d\ad011ef8c5d32913cfa4e7f7bda74e3a6b6c2598
 …
 Udomain/src/main/java/co/com/sofka/almacen/venta/command/ActualizarContactoCajero.java,1\9\192d480aef767e3740b4735577fc22d138c4b700
 „
 Tdomain/src/main/java/co/com/sofka/almacen/venta/event/ContactoActualizadoCajero.java,2\5\2590a704b7ba2641ab541c0236d9acfd0c940a44
 ~
 Ndomain/src/main/java/co/com/sofka/almacen/domicilio/event/DomicilioCreado.java,3\2\32160613e2746df97f903d9fcef057ec4e15f36c
-}
-Mdomain/src/main/java/co/com/sofka/almacen/domicilio/event/VehiculoCreado.java,3\0\30df49a4969e0d76cae0db621ba4d9f4df0a0c8f
-~
-Ndomain/src/main/java/co/com/sofka/almacen/domicilio/command/CrearVehiculo.java,a\5\a5ebcf0d7bb8a8473799873b525366353503b853
 ‹
 [domain/src/main/java/co/com/sofka/almacen/domicilio/command/ActualizarContactoMensajer.java,8\8\889ce6366bf60ef760cbd787547d679667ca2098
 r
@@ -121,8 +111,6 @@ o
 Wdomain/src/main/java/co/com/sofka/almacen/domicilio/command/AsignarDireccionPedido.java,d\4\d47bb8326b3f89b26bf442c3a28d9ed8a004e012
 ‰
 Ydomain/src/main/java/co/com/sofka/almacen/domicilio/event/DireccionPedidoActualizada.java,e\3\e378799a3b2b5a704ca1d3fa66d09f0f14244f9d
-}
-Mdomain/src/main/java/co/com/sofka/almacen/domicilio/DomicilioEventChange.java,6\2\62db9bb15a9cd28b33cd1957e6b615422773b309
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 >
@@ -131,8 +119,6 @@ Mdomain/src/main/java/co/com/sofka/almacen/domicilio/DomicilioEventChange.java,
 business/pom.xml,d\4\d4ebdfff43bfaf86e620b416afb4835b5f67b594
 w
 Gdomain/src/main/java/co/com/sofka/almacen/venta/command/CrearVenta.java,3\9\39a165f1d50e26634dcc1a2665edd284fdb9db55
-„
-Tbusiness/src/test/java/co/com/sofka/almacen/domicilio/CrearDomicilioUseCaseTest.java,2\e\2e2cef37943550643e934960423b9501d6bb49a7
 €
 Pbusiness/src/main/java/co/com/sofka/almacen/domicilio/CrearDomicilioUseCase.java,c\a\cabb2394d04a75f30fe4d12e626ecd97e61ef9ca
 

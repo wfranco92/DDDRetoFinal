@@ -1,13 +1,9 @@
 package co.com.sofka.almacen.domicilio;
 
 import co.com.sofka.almacen.domicilio.event.*;
-import co.com.sofka.almacen.domicilio.values.Capacidad;
-import co.com.sofka.almacen.domicilio.values.Direccion;
-import co.com.sofka.almacen.domicilio.values.DomicilioId;
-import co.com.sofka.almacen.domicilio.values.Tipo;
+import co.com.sofka.almacen.domicilio.values.*;
 import co.com.sofka.almacen.generic.Contacto;
 import co.com.sofka.almacen.generic.Salario;
-import co.com.sofka.almacen.tienda.Tienda;
 import co.com.sofka.almacen.tienda.values.TiendaId;
 import co.com.sofka.almacen.generic.Factura;
 import co.com.sofka.domain.generic.AggregateEvent;
@@ -40,8 +36,9 @@ public class Domicilio extends AggregateEvent<DomicilioId> {
         return domicilio;
     }
 
-    public void crearVehiculo(Tipo tipo, Capacidad capacidad){
-        appendChange(new VehiculoCreado(tipo, capacidad)).apply();
+    public void crearVehiculo(Tipo tipo){
+        var vehiculoId = new VehiculoId();
+        appendChange(new VehiculoCreado(vehiculoId, tipo)).apply();
     }
     public void actualizarContactoMensajero(Contacto contacto){
         appendChange(new ContactoMensajeroActualizado(contacto)).apply();

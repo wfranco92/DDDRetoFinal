@@ -16,8 +16,7 @@ public class DomicilioEventChange extends EventChange {
         });
 
         apply((VehiculoCreado event) -> {
-            domicilio.vehiculo.Tipo = event.getTipo();
-            domicilio.vehiculo.capacidad = event.getCapacidad();
+            domicilio.vehiculo = new Vehiculo(event.getVehiculoId(), event.getTipo());
         });
 
         apply((ContactoMensajeroActualizado event) -> {
