@@ -6,7 +6,7 @@ public class GerenteId extends Identity {
     public GerenteId(String id) {
         super(id);
     }
-
+    public GerenteId(){}
     public static GerenteId of(String id){
         return  new GerenteId(id);
     }

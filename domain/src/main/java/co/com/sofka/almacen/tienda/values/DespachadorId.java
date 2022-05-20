@@ -6,7 +6,7 @@ public class DespachadorId extends Identity {
     public DespachadorId(String id) {
         super(id);
     }
-
+    public DespachadorId(){}
     public static DespachadorId of(String id){
         return new DespachadorId(id);
     }

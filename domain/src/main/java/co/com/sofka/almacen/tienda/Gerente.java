@@ -23,4 +23,8 @@ public class Gerente extends Entity<GerenteId> {
     public Contacto Contacto() {
         return contacto;
     }
+
+    public void actualizarContacto(Contacto contacto){
+        this.contacto = contacto;
+    }
 }

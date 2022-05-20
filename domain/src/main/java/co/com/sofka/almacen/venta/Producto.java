@@ -1,5 +1,6 @@
 package co.com.sofka.almacen.venta;
 
+import co.com.sofka.almacen.generic.Nombre;
 import co.com.sofka.almacen.venta.values.Descripcion;
 import co.com.sofka.almacen.venta.values.Precio;
 import co.com.sofka.almacen.venta.values.ProductoId;

@@ -12,8 +12,7 @@ public class Vehiculo extends Entity<VehiculoId> {
 
     public Vehiculo(VehiculoId entityId, Tipo tipo) {
         super(entityId);
-        Tipo = tipo;
-        this.capacidad = capacidad;
+        this.Tipo = tipo;
     }
 
     public Tipo Tipo() {
@@ -24,7 +23,7 @@ public class Vehiculo extends Entity<VehiculoId> {
         return capacidad;
     }
 
-    public void agregarCapacidad(Capacidad capacidad){
+    public void asignarCapacidad(Capacidad capacidad){
         this.capacidad = capacidad;
     }
 }

@@ -12,10 +12,9 @@ public class Pedido extends Entity<PedidoId> {
     protected Direccion direccion;
     protected Peso peso;
 
-    public Pedido(PedidoId entityId, NombreCliente nombreCliente, Peso peso) {
+    public Pedido(PedidoId entityId, NombreCliente nombreCliente) {
         super(entityId);
         this.nombreCliente = nombreCliente;
-        this.peso = peso;
     }
 
     public void asignarPeso(Peso peso){
