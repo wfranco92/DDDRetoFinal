@@ -1,7 +1,11 @@
 package co.com.sofka.almacen.venta;
 
+import co.com.sofka.almacen.generic.Contacto;
+import co.com.sofka.almacen.generic.Nombre;
+import co.com.sofka.almacen.generic.Salario;
 import co.com.sofka.almacen.tienda.event.TiendaCreada;
 import co.com.sofka.almacen.venta.event.*;
+import co.com.sofka.almacen.venta.values.Documento;
 import co.com.sofka.domain.generic.EventChange;
 
 import java.util.ArrayList;
@@ -15,12 +19,12 @@ public class VentaEventChange extends EventChange {
         });
 
         apply((CajeroCreado event) -> {
-            venta.cajero.nombre = event.getNombre();
+            venta.cajero.nombre = (Nombre) event.getNombre().value();
             venta.cajero.contacto = event.getContacto();
         });
 
         apply((ClienteCreado event) -> {
-            venta.cliente.nombre = event.getNombre();
+            venta.cliente.nombre = (Nombre) event.getNombre().value();
             venta.cliente.documento = event.getDocumento();
         });
 
@@ -30,15 +34,15 @@ public class VentaEventChange extends EventChange {
         });
 
         apply((SalarioAsignadoCajero event) -> {
-            venta.cajero.asignarSalario(event.getSalario());
+            venta.cajero.asignarSalario((Salario) event.getSalario().value());
         });
 
         apply((ContactoActualizadoCajero event) -> {
-            venta.cajero.actualizarContacto(event.getContacto());
+            venta.cajero.actualizarContacto((Contacto) event.getContacto().value());
         });
 
         apply((InformacionActualizadaCliente event) -> {
-            venta.cliente.actualizarInformacion(event.getNombre(), event.getDocumento());
+            venta.cliente.actualizarInformacion((Nombre) event.getNombre().value(), (Documento) event.getDocumento().value());
         });
 
     }
