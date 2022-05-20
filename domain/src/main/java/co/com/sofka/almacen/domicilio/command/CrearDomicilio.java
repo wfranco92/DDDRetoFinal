@@ -13,7 +13,7 @@ public class CrearDomicilio extends Command {
     private final TiendaId tiendaId;
     private final DomicilioId domicilioId;
 
-    public CrearDomicilio(Pedido pedido, Mensajero mensajero, TiendaId tiendaId, DomicilioId domicilioId) {
+    public CrearDomicilio(DomicilioId domicilioId, Pedido pedido, Mensajero mensajero, TiendaId tiendaId) {
         this.pedido = pedido;
         this.mensajero = mensajero;
         this.tiendaId = tiendaId;

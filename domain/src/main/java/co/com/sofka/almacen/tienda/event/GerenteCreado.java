@@ -5,10 +5,10 @@ import co.com.sofka.almacen.generic.Nombre;
 import co.com.sofka.almacen.tienda.values.GerenteId;
 import co.com.sofka.domain.generic.DomainEvent;
 
-public class GerenteCreado extends DomainEvent {
-    private GerenteId gerenteId;
-    private Nombre nombre;
-    private Contacto contacto;
+public class GerenteCreado extends DomainEvent{
+    private final GerenteId gerenteId;
+    private final Nombre nombre;
+    private final Contacto contacto;
 
     public GerenteCreado(GerenteId gerenteId, Nombre nombre, Contacto contacto) {
         super("co.com.sofka.almacen.tienda.GerenteCreado");

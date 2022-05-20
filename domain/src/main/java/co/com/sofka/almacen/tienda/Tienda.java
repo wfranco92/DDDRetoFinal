@@ -18,6 +18,7 @@ public class Tienda extends AggregateEvent<TiendaId> {
     protected Despachador despachador;
     protected Set<Proveedor> proveedor;
 
+
     public Tienda(TiendaId entityId, NombreTienda nombreTienda) {
         super(entityId);
         appendChange(new TiendaCreada(nombreTienda)).apply();

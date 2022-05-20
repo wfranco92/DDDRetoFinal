@@ -11,7 +11,7 @@ public class CrearGerente extends Command {
     private final Contacto contacto;
     private final TiendaId tiendaId;
 
-    public CrearGerente(Nombre nombre, Contacto contacto, TiendaId tiendaId) {
+    public CrearGerente(TiendaId tiendaId, Nombre nombre, Contacto contacto) {
         this.nombre = nombre;
         this.contacto = contacto;
         this.tiendaId = tiendaId;

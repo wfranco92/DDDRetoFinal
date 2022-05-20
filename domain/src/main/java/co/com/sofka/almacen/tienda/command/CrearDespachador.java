@@ -11,7 +11,7 @@ public class CrearDespachador extends Command {
     private final Nombre nombre;
     private final TiendaId tiendaId;
 
-    public CrearDespachador(Contacto contacto, Nombre nombre, TiendaId tiendaId) {
+    public CrearDespachador(TiendaId tiendaId, Contacto contacto, Nombre nombre)  {
         this.contacto = contacto;
         this.nombre = nombre;
         this.tiendaId = tiendaId;

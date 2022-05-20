@@ -4,7 +4,7 @@ import co.com.sofka.almacen.tienda.values.NombreTienda;
 import co.com.sofka.almacen.tienda.values.TiendaId;
 import co.com.sofka.domain.generic.Command;
 
-public class CrearTienda extends Command {
+public class CrearTienda extends Command{
 
     private final TiendaId tiendaId;
     private final NombreTienda nombreTienda;
