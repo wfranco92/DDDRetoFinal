@@ -6,6 +6,7 @@ import co.com.sofka.almacen.generic.Salario;
 import co.com.sofka.almacen.tienda.event.*;
 import co.com.sofka.domain.generic.EventChange;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class TiendaEventChange extends EventChange {
@@ -13,6 +14,8 @@ public class TiendaEventChange extends EventChange {
         apply((TiendaCreada event) -> {
             tienda.nombreTienda = event.getNombreTienda();
             tienda.proveedor = new HashSet<>();
+            tienda.ventas = new ArrayList<>();
+            tienda.domicilios = new ArrayList<>();
         });
 
         apply((ProveedorCreado event) -> {
@@ -40,6 +43,14 @@ public class TiendaEventChange extends EventChange {
 
         apply((ContactoDespachadorActualizado event) -> {
             tienda.despachador.actualizarContacto((Contacto) event.getContacto().value());
+        });
+
+        apply((NumeroVentasActualizadas event) -> {
+            tienda.ventas.add(event.getVentas());
+        });
+
+        apply((NumeroDomiciliosActualizados event) -> {
+            tienda.domicilios.add(event.getDomicilio());
         });
 
     }

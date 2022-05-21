@@ -7,7 +7,7 @@ public class DomicilioId extends Identity {
     public DomicilioId(String id) {
         super(id);
     }
-
+    public DomicilioId(){}
     public static DomicilioId of(String id){
         return new DomicilioId(id);
     }

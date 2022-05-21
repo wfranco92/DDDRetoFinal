@@ -6,6 +6,8 @@ import co.com.sofka.almacen.generic.Contacto;
 import co.com.sofka.almacen.generic.Salario;
 import co.com.sofka.almacen.tienda.values.TiendaId;
 import co.com.sofka.almacen.generic.Factura;
+import co.com.sofka.almacen.venta.event.VentaFinalizada;
+import co.com.sofka.almacen.venta.values.VentaId;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 
@@ -55,7 +57,11 @@ public class Domicilio extends AggregateEvent<DomicilioId> {
     public void asignarDireccionPedido(Direccion direccion){
         appendChange(new DireccionPedidoActualizada(direccion)).apply();
     }
-
+    public void finalizarDomicilio(){
+        var domicilioId = new DomicilioId();
+        var tiendaId = new TiendaId();
+        appendChange(new DomicilioFinalizado(domicilioId, tiendaId)).apply();
+    }
 
     public Mensajero Mensajero() {
         return mensajero;

@@ -1,12 +1,6 @@
 
 u
-Edomain/src/main/java/co/com/sofka/almacen/tienda/values/TiendaId.java,b\6\b69a1c3edd077e4056c573e8d2d99a7a310140bd
-s
-Cdomain/src/main/java/co/com/sofka/almacen/venta/values/VentaId.java,b\5\b5126177aae2c723b97aca731ad5b4a83a965413
-u
 Edomain/src/main/java/co/com/sofka/almacen/venta/values/FacturaId.java,a\c\ac79a3806d7c81ecfc0d197af85e665160f51a99
-{
-Kdomain/src/main/java/co/com/sofka/almacen/domicilio/values/DomicilioId.java,d\b\db1b70d4c9415db7c840ef65f8609e530a9f2c5d
 x
 Hdomain/src/main/java/co/com/sofka/almacen/domicilio/values/PedidoId.java,9\4\94ecbc5e8beafc8fc50805928a8932d2a7ed211c
 }

@@ -49,10 +49,11 @@ public class Venta extends AggregateEvent<VentaId> {
         var productoId = new ProductoId();
         appendChange(new ProductoCreado(productoId, nombre, descripcion)).apply();
     }
-
-/*    public void asignarPrecioProducto(Precio precio){
-        appendChange(new PrecioAsignadoProducto(precio)).apply();
-    }*/
+    public void finalizarVenta(){
+        var ventaId = new VentaId();
+        var tiendaId = new TiendaId();
+        appendChange(new VentaFinalizada(ventaId, tiendaId)).apply();
+    }
 
     public void asignarSalarioCajero(Salario salario) {
         appendChange(new SalarioAsignadoCajero(salario)).apply();

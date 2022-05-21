@@ -2,6 +2,7 @@ package co.com.sofka.almacen.domicilio;
 
 import co.com.sofka.almacen.domicilio.event.*;
 import co.com.sofka.almacen.venta.event.VentaCreada;
+import co.com.sofka.almacen.venta.event.VentaFinalizada;
 import co.com.sofka.domain.generic.EventChange;
 
 import java.util.ArrayList;
@@ -33,6 +34,9 @@ public class DomicilioEventChange extends EventChange {
 
         apply((DireccionPedidoActualizada event) -> {
             domicilio.pedido.asignarDireccion(event.getDireccion());
+        });
+
+        apply((DomicilioFinalizado event) -> {
         });
     }
 }

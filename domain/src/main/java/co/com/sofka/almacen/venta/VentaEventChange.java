@@ -45,5 +45,8 @@ public class VentaEventChange extends EventChange {
             venta.cliente.actualizarInformacion((Nombre) event.getNombre().value(), (Documento) event.getDocumento().value());
         });
 
+        apply((VentaFinalizada event) -> {
+        });
+
     }
 }

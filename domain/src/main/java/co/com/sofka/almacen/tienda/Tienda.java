@@ -17,6 +17,8 @@ public class Tienda extends AggregateEvent<TiendaId> {
     protected Gerente gerente;
     protected Despachador despachador;
     protected Set<Proveedor> proveedor;
+    protected List<String> ventas;
+    protected List<String> domicilios;
 
 
     public Tienda(TiendaId entityId, NombreTienda nombreTienda) {
@@ -59,17 +61,17 @@ public class Tienda extends AggregateEvent<TiendaId> {
         appendChange(new SalarioDespachadorAsignado(salario)).apply();
     }
 
-    public void actualizarContactoDespachador(Contacto contacto){
+    public void actualizarContactoDespachador(Contacto contacto) {
         appendChange(new ContactoDespachadorActualizado(contacto)).apply();
     }
 
-/*    public void actualizarContactoProveedor(Contacto contacto){
-        appendChange(new ContactoProveedorActualizado(contacto)).apply();
-    }*/
+    public void actualizarNumeroVentas(String venta) {
+        appendChange(new NumeroVentasActualizadas(venta)).apply();
+    }
 
-    /*    public void eliminarProveedor(ProveedorId proveedorId){
-        appendChange(new ContactoProveedorActualizado(contacto)).apply();
-    }*/
+    public void actualizarNumeroDomicilios(String domicilio) {
+        appendChange(new NumeroDomiciliosActualizados(domicilio)).apply();
+    }
 
     public NombreTienda NombreTienda() {
         return nombreTienda;
